@@ -10,30 +10,31 @@
     <link rel="stylesheet" href="style.css" type="text/css"> <!--must write-->
 </head>
 <body>
-<section class="home-wrapper"> <!--FLEXBOX FOR ENTIRE BODY-->
+<section class="home-wrapper" id="fadein"> <!--FLEXBOX FOR ENTIRE BODY-->
   <header>
-    <div class="logo"> <img src="./Images/OCBC WHITE.png" alt="OCBC logo" height="40px" width="190px"> </div> <!--Logo nav page-->
-    <nav> <a href="index.html">Home</a> <a href="#account">Account</a> <a href="#cards">Cards</a> <a href="#aboutus">About Us</a> <a class="signup" href="#signup">Sign Up</a> </nav>
+    <div class="logo"> <img src="./Images/OCBC WHITE.png" alt="OCBC logo" > </div> <!--Logo nav page-->
+    <nav> <a href="index.html">Home</a> <a href="cards.html">Cards</a> <a href="#aboutus">About Us</a> <a class="signup" href="#signup">Sign Up</a> </nav>
   </header>
-  <div class="homecontent">
+  <div class="homecontent" >
     <div class="notOnMobileBanner">
-      <h2 class="bannermsg"><em><a href="#Joinnow">Join Now!</a></em></h2>
+
     </div>
     <div id="mainhomeContent">
-      <h1 class="advfont"><b> 365 </br> Days with </br> <em style="color:red">OCBC 360 Account</em> </b></h1>
-        <div class="loginform">
+      <h1 class="advfont" id="splitscreen"><b> 365 </br> Days with </br> <em style="color:red">OCBC 360 Account</em> </b></h1>
+        <div class="loginform" id="splitscreen">
         <form action="#action_page.php">
-            <label for "username">Username:</label>
+            <label for "username" style="font-family: 'Lato', sans-serif">Username:</label>
             <input type ="text" placeholder="Enter access code" id = "username" required>
-            <label for "password">Password:</label>
+            <label for "password" style="font-family: 'Lato', sans-serif">Password:</label>
             <input type="password" placeholder="Enter Password" id="password" required>
-            <input type="submit" value="Login">
+            <a><input type="submit" value="Login" style="font-family: 'Lato', sans-serif"></a>
         </form>
         </div>
     </div>
     <div class="addContent">
-        <h4><b>Promotions</b></h4>
+        <h4><b>Promotion</b></h4>
         <img src="./Images/addcontent1.jpg.png" width="100%" height="40%">
+        <img src="./Images/addcontent2.jpeg" width="100%" height="40%"
     </div>
     <footer>
       <div class="logo">
@@ -53,5 +54,6 @@
     </footer>
   </div>
 </section>
+<script src="script.js"></script>
 </body>
 </html>
