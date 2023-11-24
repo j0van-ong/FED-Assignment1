@@ -5,6 +5,8 @@
     <title>OCBC Online | Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kanit:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <!--CSS style sheets-->
     <link rel="stylesheet" href="style.css" type="text/css"> <!--must write-->
@@ -17,17 +19,18 @@
   </header>
   <div class="homecontent" >
     <div class="notOnMobileBanner">
-
+      <!--a container for the left banner on the webpage-->
     </div>
     <div id="mainhomeContent">
       <h1 class="advfont" id="splitscreen"><b> 365 </br> Days with </br> <em style="color:red">OCBC 360 Account</em> </b></h1>
         <div class="loginform" id="splitscreen">
-        <form action="#action_page.php">
+        <form action="#">
+            <h5>Online Banking</h5>
             <label for "username" style="font-family: 'Lato', sans-serif">Username:</label>
-            <input type ="text" placeholder="Enter access code" id = "username" required>
+            <input type ="text" placeholder="Enter access code" id = "username" name="username1" required>
             <label for "password" style="font-family: 'Lato', sans-serif">Password:</label>
-            <input type="password" placeholder="Enter Password" id="password" required>
-            <a><input type="submit" value="Login" style="font-family: 'Lato', sans-serif"></a>
+            <input type="password" placeholder="Enter Password" id="password" name="password1" required>
+            <input type="submit" value="Login" onclick="CheckPassword(username1, password1)" style="font-family: 'Lato', sans-serif">
         </form>
         </div>
     </div>
@@ -38,7 +41,7 @@
     </div>
     <footer>
       <div class="logo">
-        <img src="./Images/OCBC WHITE.png" alt="OCBC logo" height="40px" width="190px">
+        <img src="./Images/OCBC WHITE.png" alt="OCBC logo" >
       </div>
         <div class="linksfooter">
         <ul>

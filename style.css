@@ -71,11 +71,11 @@ header nav a{
     margin-top: 8%;
     padding-bottom: 8%;
     float:left;
-    font-size: 55px;
-    font-family: 'Lato', sans-serif;
+    font-size: 48px;
+    font-family: 'Archivo Black', sans-serif;
     background-color: #cccccc2e;
     border-radius: 5px;
-    text-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.755);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.755);
 }
 .homecontent #mainhomeContent .loginform {
     width:30%;
@@ -84,13 +84,18 @@ header nav a{
     margin-top: 13%;
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 6%;
+
     background-color: rgb(223, 1, 1);
     color: white;
     border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+}
+.homecontent #mainhomeContent .loginform h5 {
+    font-size: 20px;
+    text-shadow: 1px 1px rgb(56, 56, 56);
 }
 
-input[type=text], select {
+.homecontent #mainhomeContent .loginform input[type=text], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -99,16 +104,16 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
-input[type=password], select {
+.homecontent #mainhomeContent .loginform input[type=password], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
+    box-sizing: border-box; /*included in the width, height, for pad and border*/
     border-radius: 4px;
-    box-sizing: border-box;
 }
-input[type=submit] {
+.homecontent #mainhomeContent .loginform input[type=submit] {
     width: 100%;
     background-color: rgb(232, 232, 232);
     color: rgb(255, 0, 0);
@@ -182,8 +187,75 @@ input[type=submit] {
     padding: 2%;
     text-shadow: 1.5px 1.5px black;
 }
+.homecontent .cardsContainer{
+    display: flex;
+	width: 100%;
+    flex-wrap: wrap; /*if unable to fit, wrap and pushes it down*/
+}
+.home-wrapper .homecontent .cardsContainer .flex-cardItem{
+    background-color: #cccccc28;
+    width: 30%;
+    margin-left: 1.25%; /*for spacing inbetween left right*/
+    margin-right: 1.25%;
+    margin-bottom: 2%;
+    padding-bottom: 3%;
+    display: flex;
+    flex-grow: 1; /*grow proportionally to other flex items.*/
+    flex-basis: 15%; /*initially take up 15% of the available space*/
+    flex-direction: column; /*pushes it down into column*/
+    border-radius: 4px;
+    border-color: black;
+    border: 5px ridge;
+    padding: 5px;  /*5+5px makes it able to split into 2 columns when resize*/
+}
+
+.homecontent .cardsContainer .flex-cardItem .flex-cardImg{
+    display: flex;
+    justify-content: center; /*middld alignment*/
+    padding-top: 20px ;
+}
+.homecontent .cardsContainer .flex-cardItem .flex-cardImg img{
+    height: 200px;
+    width: 310px;
+}
 
 
+.homecontent .cardsContainer .flex-cardItem .flex-CardInfo{
+    font-family: 'Lato', sans-serif;
+}
+.homecontent .cardsContainer .flex-cardItem .flex-CardInfo h4{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+}
+.homecontent .cardsContainer .flex-cardItem .flex-CardInfo input[type="button"]{
+    width: 33%;
+    padding: 15px 18px; /*top-bot, r-l*/
+    margin-left: 2%;
+    margin-right: 2%;
+    display: inline-block;
+    border: 2.5px solid rgb(24, 87, 247);
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(24, 87, 247);
+}
+.homecontent .cardsContainer .flex-cardItem .flex-CardInfo input[type="button"]:hover{
+    transition: 1s;
+    color:white;
+    background-color: rgb(24, 87, 247);
+}
+
+
+@media screen and (max-width:700px){
+    .homecontent .cardsContainer .flex-cardItem .flex-cardImg img{
+        height: 150px;
+        width: 260px;
+    }
+    .homecontent .cardsContainer .flex-cardItem .flex-CardInfo input[type="button"]{
+        font-size: 10px;
+    }
+}
 @media screen and (max-width:600px) {
 
     .homecontent .notOnMobileBanner{
@@ -213,13 +285,12 @@ input[type=submit] {
         width: 96%;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
+        flex-direction: row; /*opp of column */
         height: auto;
         
     }
     .homecontent #mainhomeContent .advfont {
         width:100%;
-
     }
     .homecontent #mainhomeContent .loginform{
         width: 100%;
@@ -228,4 +299,17 @@ input[type=submit] {
         align-content: center;
         margin: 3%;
     }
+    /*CARDS RESPONSIVE*/
+    .home-wrapper .homecontent .cardsContainer .flex-cardItem{
+        width: 100%;
+    }
+    .homecontent .cardsContainer .flex-cardItem .flex-cardImg img{
+        height: 200px;
+        width: 310px;
+        /* change back to default size*/
+    }
+    .homecontent .cardsContainer .flex-cardItem .flex-CardInfo input[type="button"]{
+        font-size: 15px;
+    }
+
 }  
