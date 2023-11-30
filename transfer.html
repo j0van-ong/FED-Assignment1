@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>OCBC Online | Transfer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kanit:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!--CSS style sheets-->
+    <link rel="stylesheet" href="style.css" type="text/css"> <!--must write-->
+</head>
+<body>
+  <section class="overview-wrapper" id="fadein" > <!--CONTAINER FOR ENTIRE BODY-->
+  <header class="OnTopMobileOnly"> <!--nav bar on left, top when mobile screen-->
+    <div class="logo"> <img src="./Images/OCBC WHITE.png" alt="OCBC logo" > </div> <!--Logo nav page-->
+    <nav id="overviewNaV"> <a href="overview.html"> Overview</a> <a class="currentpg" href="transfer.html">Transfer</a> <a id="logoutbutton">Log Out</a> </nav>
+  </header>
+  <section class="toRightTransfer"> <!--CONTAINER FOR RIGHT SIDE OF SCREEN-->
+    <div class="transferForm">
+        <h1>Payment Page</h1>
+        <form action="#"> <!--details to fill up-->
+            <label for="paymentMthd">Select Payment Method: </label> <br/>
+            <input type ="radio" name="paymentMthd" value="MasterCard" required><img src="./Images/Mastercard-Logo.png" alt="mastercard logo">
+            <input type ="radio" name="paymentMthd" value="VISA" required> <img src="./Images/Visa_Logo.png" alt="VISA Logo"> <br/><br/>
+            <label for="BankNo">Enter Recipient Bank Account Number:</label>
+            <input type ="text" placeholder="Enter Bank Account Number omitting dash..." id = "BankNo" name="BankNo" required>
+            <label for="Amount">Input amount to transfer:</label>
+            <input type="number" name="Amount" placeholder="Amount($)" id="Amount" required>
+            <label for="TransferPurpose">Purpose of Transfer</label>
+            <select id="TransferPurpose" name="TransferPurpose" required>
+              <option>Others</option>
+              <option>Salary Disbursement</option>
+              <option>Bill Payment</option>
+              <option>Insurance</option>
+              <option>Rent</option>
+            </select>
+            <input type="submit" id="submitBtn" name="submitBtn">
+            <h5> Check below for successful submission when Transaction ID appears</h5>
+        </form>
+        <div id="paymentRecipt"> <!--CONTAINER FOR RECEIPT, TO BE SHOWN AFTER PAYMENT-->
+            <div class="logored"><img src="./Images/OCBC_Bank_logo_logotype_Singapore.png" alt="OCBC Logo"></div>
+            <div class="centerAlign">
+              <h1>Payment Sucessful!</h1>
+              <img src="./Images/Green-Tick-PNG-Pic.png" alt="Green tick">
+            </div>
+              <div id="completeReq">
+                  <!--INSERT USER OUTPUT HERE.-->
+                  
+              </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

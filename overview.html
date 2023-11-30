@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>OCBC Online | Overview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Kanit:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <!--CSS style sheets-->
+    <link rel="stylesheet" href="style.css" type="text/css"> <!--must write-->
+</head>
+<body>
+  <section class="overview-wrapper" id="fadein" > <!--CONTAINER FOR ENTIRE BODY-->
+  <header class="OnTopMobileOnly"> <!--nav bar on left, top when mobile screen-->
+    <div class="logo"> <img src="./Images/OCBC WHITE.png" alt="OCBC logo" > </div> <!--Logo nav page-->
+    <nav id="overviewNaV"> <a class="currentpg" href="overview.html"> Overview</a> <a href="transfer.html">Transfer</a> <a href="index.html" id="logoutbutton">Log Out</a> </nav>
+  </header>
+  <div class="rightAlign"> <!--BOX FOR THE RIGHT OBJECT -->
+  <div class="cardsNtransac"> <!--CONTAINER IN THE MIDDLE COLUMN-->
+    <div class="CardsBox"> <!--CONTAINER FOR CARD SECTION-->
+      <h3>My Cards: <br/>$1500SGD</h3>
+      <div class="userCards">
+        <img class="cardImg" src="./Images/UserCard (2).png">
+      
+      <div class="CardsButtons">
+      <button> <img src="./Images/pay bill.png"> Pay Bill</button>
+      <button> <img src="./Images/redlock.jpg"> Lock Card</button>
+      </div>
+      </div>
+    </div>
+    <div class="TransacBox"> <!--CONTAINER FOR MY TRANSACTION-->
+      <h3>My Transactions</h3>
+      <div class="userTrans">
+        <div class="transDetails"> <p><b>NETS CONSUMER: </b>GENKI SUSHI SGP $43.50</p> </div>
+        <div class="transDetails"> <p><b>NETS CONSUMER: </b>SAIZERIYA HML SGP $76.30</p></div>
+        <div class="transDetails"> <p><b>NETS CONSUMER: </b>POPULAR WESTGATE SGP $20.30</p></div>
+        <div class="transDetails"> <p><b>NETS CONSUMER: </b>ANYWHEEL SGP $2.00</p></div>
+        <div class="transDetails"> <p><b>NETS CONSUMER: </b>NP CHICKEN RICE SGP $4.00</p></div>
+      </div>
+    </div>
+  </div>
+  <div class="graph"> <!--CONTAINER FOR MOST RIGHT COLUMN-->
+    <div class="GraphBox"> <!--CATEGORY SPEND-->
+    <h3>Monthly Spending by Category</h3>
+    <img id="graphPic" src="./Images/spending-graph.png">
+    <img id="donutPic" src="./Images/piechart.jpg">
+    <div class="spendingCat">
+      <div class="spendDetails"><p><b>Shopping: </b>$400</p> </div>
+      <div class="spendDetails"><p><b>Transfer: </b>$221</p> </div>
+      <div class="spendDetails"><p><b>Food: </b>$150</p> </div>
+      <div class="spendDetails"><p><b>Transport: </b>$70</p> </div>
+      <div class="spendDetails"><p><b>Sports: </b>$30</p> </div>
+    </div>
+    </div>
+  </div>
+  </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

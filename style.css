@@ -1,8 +1,9 @@
-/*HOMEPAGE ON LAPTOP */
+/*HOMEPAGE ON LAPTOP, NAV BAR BEFORE LOGIN */
+
 .home-wrapper header {
     background-color: rgb(223, 1, 1);
     font-family: 'Lato', sans-serif;
-    overflow:auto;
+    overflow:auto; /* clip the content or add scrollbars if cant fit*/ 
 }
 
 .home-wrapper header .logo {
@@ -24,7 +25,7 @@
     width:66%;
     float: left;
 }
-header nav .signup {
+.home-wrapper header nav .signup {
     background-color :rgb(255, 255, 255);
     padding: 10px 12px;
     border-radius: 4px;
@@ -32,10 +33,10 @@ header nav .signup {
     font-weight: bold;
     
 }
-.signup:hover{
+.home-wrapper header nav .signup:hover{
     background-color: #ccc;
 }
-header nav a{
+.home-wrapper header nav a{
     color:rgb(255, 255, 255);
     text-decoration: none;
     margin-left:7%;
@@ -43,6 +44,7 @@ header nav a{
 }
 /*End of nav bar desktop view*/
 
+/*Side banner on the left Homepage*/
 .homecontent .notOnMobileBanner {
     width: 33%;
     float:left;
@@ -52,7 +54,7 @@ header nav a{
     background-size: cover;
 }
 
-
+/*box for the msg and login form*/
 .homecontent #mainhomeContent {
     background-image: url(./Images/output-onlinepngtools.png);
     background-size: cover;
@@ -90,6 +92,7 @@ header nav a{
     border-radius: 10px;
     font-family: 'Lato', sans-serif;
 }
+/*text"onlinebanking" in the form*/
 .homecontent #mainhomeContent .loginform h5 {
     font-size: 20px;
     text-shadow: 1px 1px rgb(56, 56, 56);
@@ -97,9 +100,9 @@ header nav a{
 
 .homecontent #mainhomeContent .loginform input[type=text], select {
     width: 100%;
-    padding: 12px 20px;
+    padding: 12px 20px; /*this adds spaces within the textbox*/
     margin: 8px 0;
-    display: inline-block;
+    display: inline-block; /*able to apply width and padding to this input box*/
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -113,9 +116,9 @@ header nav a{
     box-sizing: border-box; /*included in the width, height, for pad and border*/
     border-radius: 4px;
 }
-.homecontent #mainhomeContent .loginform input[type=submit] {
+.homecontent #mainhomeContent .loginform input[type=button] {
     width: 100%;
-    background-color: rgb(232, 232, 232);
+    background-color: rgb(255, 255, 255);
     color: rgb(255, 0, 0);
     font-weight: bolder;
     padding: 14px 20px;
@@ -124,6 +127,7 @@ header nav a{
     border-radius: 4px;
     cursor: pointer; 
 }
+/*Picture advertisement box, below login*/
 .homecontent .addContent {
    float: left;
    padding-top: 2%;
@@ -132,11 +136,11 @@ header nav a{
    font-family: 'Lato', sans-serif;
 
 }
+/*bottom of webpage before login, footer*/
 .homecontent footer {
     padding-left: 2%;
     padding-right: 2%;
     background-color: rgb(223, 1, 1);
-
     padding-top: 2%;
 }
 .homecontent footer .logo {
@@ -162,13 +166,13 @@ header nav a{
     padding-bottom: 2%;
     padding-left: 2%;
 }
-/*Fading animation*/
+/*Fading animation, for ALL of the html*/
 #fadein{
     opacity:0;
     transition:2s;
-    animation: slide 1s forwards;
 }
 /*START OF CARDS CSS*/
+/*banner after nav box*/
 .home-wrapper .homecontent .cardSignOverview{
     font-family: 'Kanit', sans-serif;
     font-size: 25px;
@@ -182,16 +186,19 @@ header nav a{
     background-size: cover;
     text-align: center;
 }
+/*msg in the banner box*/
 .home-wrapper .homecontent .cardSignOverview #cardsmsg{
     background-color: #cccccc84;
     padding: 2%;
     text-shadow: 1.5px 1.5px black;
 }
+/*flexbox for the cards section in the middle*/
 .homecontent .cardsContainer{
     display: flex;
 	width: 100%;
     flex-wrap: wrap; /*if unable to fit, wrap and pushes it down*/
 }
+/*flexbox for each card items*/
 .home-wrapper .homecontent .cardsContainer .flex-cardItem{
     background-color: #cccccc28;
     width: 30%;
@@ -211,15 +218,14 @@ header nav a{
 
 .homecontent .cardsContainer .flex-cardItem .flex-cardImg{
     display: flex;
-    justify-content: center; /*middld alignment*/
+    justify-content: center; /*middle alignment*/
     padding-top: 20px ;
 }
 .homecontent .cardsContainer .flex-cardItem .flex-cardImg img{
     height: 200px;
     width: 310px;
 }
-
-
+/*content in the cards info*/
 .homecontent .cardsContainer .flex-cardItem .flex-CardInfo{
     font-family: 'Lato', sans-serif;
 }
@@ -240,14 +246,319 @@ header nav a{
     font-weight: bold;
     color: rgb(24, 87, 247);
 }
+/*find out more button bluebox*/
+.homecontent .cardsContainer .flex-cardItem .flex-CardInfo input[type="button"]{
+    width: 33%;
+    padding: 15px 17px; /*top-bot, r-l*/
+    margin-left: 2%;
+    margin-right: 2%;
+    display: inline-block; /*apply width and padding to this input box*/
+    border: 2.5px solid rgb(24, 87, 247);
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(24, 87, 247);
+}
 .homecontent .cardsContainer .flex-cardItem .flex-CardInfo input[type="button"]:hover{
     transition: 1s;
+    transform: scale(1.5); 
     color:white;
     background-color: rgb(24, 87, 247);
 }
+/*START OF OVERVIEW/TRANSFER CSS*/
+/*This is the side left nav bar box once login*/
+.overview-wrapper .OnTopMobileOnly {
+    float: left; /*stick to left corner*/
+    width: 17%;
+    height: 100vh;
+    background-color: rgba(223, 1, 1, 0.789);
+}
+.overview-wrapper .OnTopMobileOnly .logo img{
+    padding-top: 8%;
+    padding-left: 5%;
+    margin-bottom: 10%; /*pushes the nav button down below*/
+    height: 35px;
+    width: 170px;
+}
+/*the nav bar for the leftside */
+.overview-wrapper .OnTopMobileOnly #overviewNaV a {
+    width: 50%;
+    display: block; /*arrange in vertical, starts on a new line*/
+    font-size: 17px;
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+    color: rgb(223, 1, 1);
+    margin-left: 6%;
+    margin-bottom: 5%;
+    text-decoration: none;
+    background-color: white;
+    /*padding for button*/
+    padding-left: 4%;
+    padding-right: 6%;
+    padding-bottom: 2%;
+    padding-top: 2%;    
+    border-radius: 15px;
+}
+/*only for current page that user is on*/
+.overview-wrapper .OnTopMobileOnly #overviewNaV .currentpg {
+    color:rgb(223, 1, 1);
+    background-color: rgb(255, 195, 195);
+}
+.overview-wrapper .OnTopMobileOnly #overviewNaV a:hover {
+    transition: 1s;
+    color:rgb(223, 1, 1);
+    background-color: rgb(255, 195, 195);
+}
+/*end of navbar on left once login*/
 
+/*middle of page box, rightAlign is the whole box on the right while cardsNtransac is the middle column*/
+.overview-wrapper .rightAlign .cardsNtransac{
+    float:left;
+    width: 33%;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.184);
+    margin-left: 0.5%;
+}
 
-@media screen and (max-width:700px){
+.overview-wrapper .rightAlign .cardsNtransac .cardImg{
+    height: 190px;
+    width: 300px;
+    float: left;
+    padding-left: 2%;
+}
+/*box for My cards section*/
+.overview-wrapper .rightAlign .cardsNtransac .CardsBox{
+    height: 38%;
+    width: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    padding: 1%;
+    margin-left: 3%;
+    margin-top: 3%; /*away from nav bar*/
+    box-shadow: 2px gainsboro;
+}
+.overview-wrapper .rightAlign .cardsNtransac h3{
+    padding-left: 2%;
+    font-weight: bold;
+    padding-top: 3%;
+    margin: 1.5%;
+}
+
+.overview-wrapper .rightAlign .cardsNtransac .CardsBox .CardsButtons{
+    float:left;
+    width: 20%;
+    display: block; /*NEW LINE*/
+}
+
+.overview-wrapper .rightAlign .cardsNtransac .CardsBox .CardsButtons img{
+    height: 25px;
+    width: 25px;
+}
+.overview-wrapper .rightAlign .cardsNtransac .CardsBox .CardsButtons button{
+    border-radius: 5px;
+    padding: 2%;
+    width: 70%;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10%;
+    background-color: rgb(255, 255, 255);
+}
+/*TransacBox is the box with transaction content*/
+.overview-wrapper .rightAlign .cardsNtransac .TransacBox{
+    height: 58%;
+    width: auto;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-left: 3%;
+}
+.overview-wrapper .rightAlign .cardsNtransac .TransacBox .userTrans{
+    font-size: 15px;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+.overview-wrapper .rightAlign .cardsNtransac .TransacBox .userTrans .transDetails{
+    margin-top: 2%;
+    border-top: 2px rgb(223, 1, 1) solid;
+    border-bottom: 2px rgb(223, 1, 1) solid;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+/*for the right column box, graph section */
+.overview-wrapper .rightAlign .graph{
+    float: left;
+    width: 48%;
+    height: 100vh;
+    padding-left: 1%;
+    font-family: 'Lato', sans-serif;
+    background-color: rgba(128, 128, 128, 0.184);
+}
+/*Graph box is the white box*/
+.overview-wrapper .rightAlign .graph .GraphBox{
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 1%;
+    padding-left: 2%;
+    padding-top: 2%;
+    height: 94%;
+    width: auto;
+}
+
+.overview-wrapper .rightAlign .graph .GraphBox h3{
+    font-weight: bold;
+    padding-bottom: 2%;
+    margin-top: 1%;
+}
+
+/*formatting of visuals under graph*/
+.overview-wrapper .rightAlign .graph .GraphBox #graphPic{
+    width: 600px;
+    height: 285px;
+}
+.overview-wrapper .rightAlign .graph .GraphBox #donutPic{
+    width: 300px;
+    height: 300px;
+    float: left;
+}
+
+.overview-wrapper .rightAlign .graph .GraphBox .spendingCat .spendDetails{
+    display: inline-block; /*new line, with height and width values*/
+    width: 50%;
+    font-size: 15px;
+    padding-left: 1%;
+    margin-bottom: 1%;
+    border: 2px rgb(223, 1, 1) groove;
+    border-radius: 5px;
+}
+
+/*end of overview css*/
+/*START OF TRANSFER CSS*/
+/*below is the box for the remaining right side of the page*/
+.overview-wrapper .toRightTransfer{
+    float: left;
+    width: 83%;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.184);
+}
+.overview-wrapper .toRightTransfer .transferForm h1{
+    font-size: 25px;
+}
+/*Box for form tag */
+.overview-wrapper .toRightTransfer .transferForm{
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-right: 5%;
+    width: 85%;
+    height: 85%;
+    border: 1.5px rgb(223, 1, 1) solid;
+    border-radius: 4px;
+    font-family: 'Lato', sans-serif;
+    padding: 3%;
+    background-color: white;
+}
+.overview-wrapper .toRightTransfer .transferForm label{
+    font-weight: bold; /*each label tag */
+}
+/*formatting of the img for radio button*/
+.overview-wrapper .toRightTransfer .transferForm form img{
+    width: 60px;
+    height: 30px;
+    border: 1px gray solid;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 3%;
+}
+/*modification of form input below, eg text, num, */
+.overview-wrapper .toRightTransfer .transferForm input[type=text]{
+    width: 100%;
+    padding: 12px 20px; /*this adds spaces within the textbox*/
+    margin: 8px 0;
+    display: inline-block; /*able to apply width and padding to this input box*/
+    border: 1.5px solid rgb(223, 1, 1);
+    border-radius: 4px;
+    box-sizing: border-box; /*include the content, padding, and border of the element*/
+}
+/*formatting of the radio button size*/
+.overview-wrapper .toRightTransfer .transferForm input[type='radio'] { 
+    transform: scale(2); 
+    margin-right: 2%;
+}
+.overview-wrapper .toRightTransfer .transferForm input[type=number]{
+    width: 100%;
+    padding: 12px 20px; /*this adds spaces within the textbox*/
+    margin: 8px 0;
+    display: inline-block; /*able to apply width and padding to this input box*/
+    border: 1.5px solid rgb(223, 1, 1);
+    border-radius: 4px;
+    box-sizing: border-box; /*include the content, padding, and border of the element*/
+}
+.overview-wrapper .toRightTransfer .transferForm select{
+    border: 1.5px solid rgb(223, 1, 1);
+    border-radius: 4px;
+}
+.overview-wrapper .toRightTransfer .transferForm input[type=submit] {
+    width: 20%;
+    background-color: rgb(223, 1, 1);
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; 
+}
+
+/*Start of SuccessfulTransfer, below overview.html*/
+.overview-wrapper .toRightTransfer #paymentRecipt {
+    display: none;
+    margin-top: 20%;
+    border-radius: 5px;
+    border: 5px rgb(223, 1, 1) solid;
+    height: 90%;
+    background-image: url(./Images/recieptbackground.png);
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+}
+.overview-wrapper .toRightTransfer #paymentRecipt .logored img{
+    height:40px;
+    width:190px;
+    padding-top: 4%;
+    padding-left: 4%;
+}
+.overview-wrapper .toRightTransfer #paymentRecipt .centerAlign {
+    text-align: center;
+    font-size: 30px;   
+}
+/*below is the format of tick pic*/
+.overview-wrapper .toRightTransfer #paymentRecipt .centerAlign img {
+    width: 120px;
+    height: 100px;
+}
+.overview-wrapper .toRightTransfer #paymentRecipt #completeReq{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*The display when smaller screen is used*/
+@media screen and (max-width:1350px){
+    .overview-wrapper .rightAlign .cardsNtransac .cardImg{
+        height: 150px;
+        width: 260px;
+    }
+    .overview-wrapper .rightAlign .cardsNtransac .CardsBox .CardsButtons{
+        display: flex;
+        width: auto;
+        margin-left: 4%;
+    }
+
+}
+/*mid screen preview, mainly for cardspage*/
+@media screen and (max-width:750px){
     .homecontent .cardsContainer .flex-cardItem .flex-cardImg img{
         height: 150px;
         width: 260px;
@@ -255,6 +566,44 @@ header nav a{
     .homecontent .cardsContainer .flex-cardItem .flex-CardInfo input[type="button"]{
         font-size: 10px;
     }
+    /*overview css*/
+    .overview-wrapper .OnTopMobileOnly {
+        height: auto;
+        width: 100%;
+    }
+    .overview-wrapper .rightAlign .cardsNtransac{
+        width: 100%;
+    }
+    .overview-wrapper .rightAlign .cardsNtransac .CardsBox{
+        width: 98%;
+    }
+    .overview-wrapper .rightAlign .cardsNtransac .CardsBox .CardsButtons{
+        width: 20%;
+        display: block;
+        /*above set back to default setting*/
+    }
+    .overview-wrapper .rightAlign .graph{
+        width: 100%;
+        margin: 0;
+        height: auto;
+    }
+    .overview-wrapper .rightAlign .graph .GraphBox #graphPic{
+        width: 350px;
+        height: 300px;
+    }
+    .overview-wrapper .rightAlign .cardsNtransac{
+        margin: 0;
+    }
+    .overview-wrapper .toRightTransfer{
+        width: 100%;
+    }
+    .overview-wrapper .toRightTransfer .transferForm{
+        width: auto;
+    }
+    .overview-wrapper .rightAlign .graph .GraphBox .spendingCat .spendDetails{
+        width: 98%;
+    }
+
 }
 @media screen and (max-width:600px) {
 

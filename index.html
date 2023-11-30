@@ -12,29 +12,29 @@
     <link rel="stylesheet" href="style.css" type="text/css"> <!--must write-->
 </head>
 <body>
-<section class="home-wrapper" id="fadein"> <!--FLEXBOX FOR ENTIRE BODY-->
+<section class="home-wrapper" id="fadein"> <!--BOX FOR ENTIRE BODY-->
   <header>
     <div class="logo"> <img src="./Images/OCBC WHITE.png" alt="OCBC logo" > </div> <!--Logo nav page-->
     <nav> <a href="index.html">Home</a> <a href="cards.html">Cards</a> <a href="#aboutus">About Us</a> <a class="signup" href="#signup">Sign Up</a> </nav>
   </header>
-  <div class="homecontent" >
+  <div class="homecontent" > <!--whole content box till footer-->
     <div class="notOnMobileBanner">
-      <!--a container for the left banner on the webpage-->
+      <!--a container for the left banner on the webpage, only desktop view-->
     </div>
-    <div id="mainhomeContent">
-      <h1 class="advfont" id="splitscreen"><b> 365 </br> Days with </br> <em style="color:red">OCBC 360 Account</em> </b></h1>
-        <div class="loginform" id="splitscreen">
+    <div id="mainhomeContent">  <!--CONTAINER FOR LOGIN, SHORT QUOTE-->
+      <h1 class="advfont"><b> 365 </br> Days with </br> <em style="color:red">OCBC 360 Account</em> </b></h1>
+        <div class="loginform">
         <form action="#">
             <h5>Online Banking</h5>
-            <label for "username" style="font-family: 'Lato', sans-serif">Username:</label>
+            <label for="username" style="font-family: 'Lato', sans-serif">Username:</label>
             <input type ="text" placeholder="Enter access code" id = "username" name="username1" required>
-            <label for "password" style="font-family: 'Lato', sans-serif">Password:</label>
+            <label for="password" style="font-family: 'Lato', sans-serif">Password:</label>
             <input type="password" placeholder="Enter Password" id="password" name="password1" required>
-            <input type="submit" value="Login" onclick="CheckPassword(username1, password1)" style="font-family: 'Lato', sans-serif">
+            <input type="button" value="Login" onclick="CheckPassword(username1, password1)" style="font-family: 'Lato', sans-serif">
         </form>
         </div>
     </div>
-    <div class="addContent">
+    <div class="addContent"> <!--CONTAINER FOR ADERVTISEMENT IMG-->
         <h4><b>Promotion</b></h4>
         <img src="./Images/addcontent1.jpg.png" width="100%" height="40%">
         <img src="./Images/addcontent2.jpeg" width="100%" height="40%"
