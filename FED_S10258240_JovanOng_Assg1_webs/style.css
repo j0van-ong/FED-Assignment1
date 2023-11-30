@@ -349,7 +349,7 @@
 .overview-wrapper .rightAlign .cardsNtransac .CardsBox .CardsButtons{
     float:left;
     width: 20%;
-    display: block; /*NEW LINE*/
+    display: block; /*NEW LINE, whole witdh taken up*/
 }
 
 .overview-wrapper .rightAlign .cardsNtransac .CardsBox .CardsButtons img{
@@ -379,6 +379,7 @@
     padding-left: 2%;
     padding-right: 2%;
 }
+/*below is the category box*/
 .overview-wrapper .rightAlign .cardsNtransac .TransacBox .userTrans .transDetails{
     margin-top: 2%;
     border-top: 2px rgb(223, 1, 1) solid;
@@ -514,7 +515,7 @@
 
 /*Start of SuccessfulTransfer, below overview.html*/
 .overview-wrapper .toRightTransfer #paymentRecipt {
-    display: none;
+    display: none; /*NOT SHOWN UNTIL USER COMPLETES*/
     margin-top: 20%;
     border-radius: 5px;
     border: 5px rgb(223, 1, 1) solid;
@@ -523,12 +524,14 @@
     background-size: cover;
     font-family: 'Lato', sans-serif;
 }
+
 .overview-wrapper .toRightTransfer #paymentRecipt .logored img{
     height:40px;
     width:190px;
     padding-top: 4%;
     padding-left: 4%;
 }
+/*TICK PNG, and words section to align in center*/
 .overview-wrapper .toRightTransfer #paymentRecipt .centerAlign {
     text-align: center;
     font-size: 30px;   
@@ -538,18 +541,21 @@
     width: 120px;
     height: 100px;
 }
+/*style of useroutput*/
 .overview-wrapper .toRightTransfer #paymentRecipt #completeReq{
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
 
-/*The display when smaller screen is used*/
+/*The display when smaller screen is used, but still in desktop view*/
 @media screen and (max-width:1350px){
+    /*decrease cards size in overview*/
     .overview-wrapper .rightAlign .cardsNtransac .cardImg{
         height: 150px;
         width: 260px;
     }
+    /*buttons get wrapped, moves down*/
     .overview-wrapper .rightAlign .cardsNtransac .CardsBox .CardsButtons{
         display: flex;
         width: auto;
@@ -557,19 +563,19 @@
     }
 
 }
-/*mid screen preview, mainly for cardspage*/
+/*mid screen preview, mainly for cardspage styling when screen further reduced*/
 @media screen and (max-width:750px){
     .homecontent .cardsContainer .flex-cardItem .flex-cardImg img{
         height: 150px;
-        width: 260px;
+        width: 260px; /*card size decrease to fit in container*/
     }
     .homecontent .cardsContainer .flex-cardItem .flex-CardInfo input[type="button"]{
-        font-size: 10px;
+        font-size: 10px; /*style of font in 'find out more*/
     }
-    /*overview css*/
+    /*overview css below, mainly set width to takes up entire space*/
     .overview-wrapper .OnTopMobileOnly {
         height: auto;
-        width: 100%;
+        width: 100%; 
     }
     .overview-wrapper .rightAlign .cardsNtransac{
         width: 100%;
@@ -580,11 +586,11 @@
     .overview-wrapper .rightAlign .cardsNtransac .CardsBox .CardsButtons{
         width: 20%;
         display: block;
-        /*above set back to default setting*/
+        /*above set back to default setting as in the desktop view*/
     }
     .overview-wrapper .rightAlign .graph{
         width: 100%;
-        margin: 0;
+        margin: 0; /*stick to cardsNtransac column*/
         height: auto;
     }
     .overview-wrapper .rightAlign .graph .GraphBox #graphPic{
@@ -606,9 +612,9 @@
 
 }
 @media screen and (max-width:600px) {
-
+    /*ACTUAL MOBILE VIEW*/
     .homecontent .notOnMobileBanner{
-        display:none;
+        display:none; /*BANNER WILL BE HIDDEN*/ 
         width: 0%;
         height: 0;
         padding: 0;
@@ -617,9 +623,9 @@
     /*CENTRE NAV BAR FOR ALL THAT APPLIES*/ 
     .home-wrapper header nav {
         width: 98%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        display: flex; 
+        flex-direction: row; /*since its arranged in columm in default but set to float left, reverse of column is row*/
+        justify-content: space-around; /*equal distancing*/
         text-align: center;
 
     }
@@ -627,15 +633,15 @@
     .home-wrapper header .logo{
         display: flex;
         width: 96%;
-        justify-content: center;
+        justify-content: center; /*centre of top logo*/
     }
     /* Mobile for index.html homepg*/
     .homecontent #mainhomeContent {
         width: 96%;
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: row; /*opp of column */
-        height: auto;
+        flex-wrap: wrap; /*goes down if not enough space*/
+        flex-direction: row; /*opp of column as default was in column*/
+        height: auto; /*adjust to cover the entire container*/
         
     }
     .homecontent #mainhomeContent .advfont {
@@ -650,7 +656,7 @@
     }
     /*CARDS RESPONSIVE*/
     .home-wrapper .homecontent .cardsContainer .flex-cardItem{
-        width: 100%;
+        width: 100%; /*each card flexbox takes full screen*/
     }
     .homecontent .cardsContainer .flex-cardItem .flex-cardImg img{
         height: 200px;
@@ -659,6 +665,7 @@
     }
     .homecontent .cardsContainer .flex-cardItem .flex-CardInfo input[type="button"]{
         font-size: 15px;
+        /*font in 'find out more'*/
     }
 
 }  
