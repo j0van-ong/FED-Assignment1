@@ -337,7 +337,6 @@
     padding: 1%;
     margin-left: 3%;
     margin-top: 3%; /*away from nav bar*/
-    box-shadow: 2px gainsboro;
 }
 .overview-wrapper .rightAlign .cardsNtransac h3{
     padding-left: 2%;
