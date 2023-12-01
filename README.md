@@ -20,6 +20,43 @@ The new website aims to serves a wide range of users, including investors, compa
 
 -As a eldery, I need a user-friendly interface where it is easy to navigate, preferably with the help of larger icons and less clicking through link after links.
 
+My wireframe: Browse to Other materials or see below features 
+
+## Features
+My wireframe pdf: [My wireframe](https://github.com/j0van-ong/FED-Assignment1/blob/main/Other%20materials/FED_S10258240_JovanOng_Assg1_wiref.pdf)
+
+Overall: Fading animation when it loads for the first time.
+
+index.html Homepage
+-Feature 1: Login verification to verify user identity. Done using JavaScript
+-Feature 2: OCBC information such as contact at the footer. NON clickable.
+-Feature 3: Navigation link to its product and services. ABOUT US AND SIGN UP NOT LINKABLE. SIGNUP Button has effect while hovering
+
+cards.html
+-Feature 4: Find out more buttton has hovering effect. 
+
+overview.html
+-Feature 5: Simple overview page with graphics for users to take a glance.
+-Feature 6: Hovering over navigation bar results a change in color. Navigation buttons are bigger. 
+-Feature 7: Confirmation of log out action by prompting from browser. Available once login
+
+transfer.html
+-Feature 7: Fund transfer form available for user to make payment online.
+-Feature 8: Validation for the form, checking valid account number and amount to transfer, >$0
+-Feature 9: Proof of transaction available once user clicks submit. User output is shown.
+
+### Features left to implement
+-Originally wanted to open the proof of transaction in a new tab, hence clearer.
+-Initially wanted to add a button to scroll down to the bottom page for convienent.
+
+## Technologies used
+- [HTML](https://html.spec.whatwg.org/) For the structure of website.
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html) For the styling of website.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript) For validation and create meaningful interactions.
+
+- [Google fonts](https://fonts.google.com/) For the font style of selected texts or paragraph.
+- [Github](https://github.com/) For tracking past codes that are commited onto it.
+- [VSCode](https://code.visualstudio.com/) For writing all the codes need and testing of website.
 
 
 
