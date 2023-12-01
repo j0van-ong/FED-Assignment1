@@ -15,7 +15,7 @@
 <body>
   <section class="overview-wrapper" id="fadein" > <!--CONTAINER FOR ENTIRE BODY-->
   <header class="OnTopMobileOnly"> <!--nav bar on left, top when mobile screen-->
-    <div class="logo"> <img src="./Images/OCBC WHITE.png" alt="OCBC logo" > </div> <!--Logo nav page-->
+    <div class="logo"> <img src="./Images/OCBC-WHITE.png" alt="OCBC logo" > </div> <!--Logo nav page-->
     <nav id="overviewNaV"> <a href="overview.html"> Overview</a> <a class="currentpg" href="transfer.html">Transfer</a> <a id="logoutbutton">Log Out</a> </nav>
   </header>
   <section class="toRightTransfer"> <!--CONTAINER FOR RIGHT SIDE OF SCREEN-->
@@ -23,8 +23,8 @@
         <h1>Payment Page</h1>
         <form action="#"> <!--details to fill up-->
             <label for="paymentMthd">Select Payment Method: </label> <br/>
-            <input type ="radio" name="paymentMthd" value="MasterCard" required><img src="./Images/Mastercard-Logo.png" alt="mastercard logo">
-            <input type ="radio" name="paymentMthd" value="VISA" required> <img src="./Images/Visa_Logo.png" alt="VISA Logo"> <br/><br/>
+            <input type ="radio" id="paymentMthd" name="paymentMthd" value="MasterCard" required><img src="./Images/Mastercard-Logo.png" alt="mastercard logo">
+            <input type ="radio" id="paymentMthd" name="paymentMthd" value="VISA" required> <img src="./Images/Visa_Logo.png" alt="VISA Logo"> <br/><br/>
             <label for="BankNo">Enter Recipient Bank Account Number:</label>
             <input type ="text" placeholder="Enter Bank Account Number omitting dash..." id = "BankNo" name="BankNo" required>
             <label for="Amount">Input amount to transfer:</label>
@@ -50,6 +50,7 @@
                   <!--INSERT USER OUTPUT HERE.-->
                   
               </div>
+        </div>
     </div>
   </section>
   <script src="script.js"></script>
