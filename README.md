@@ -72,6 +72,8 @@ transfer.html
     1. Logging out from overview or transfer.html pages.
     2. When clicking the log out button, a prompt should appear. Clicking yes will return to homepage, while no will remain at same page.
 
+- IMPORTANT 
+- for index.html, the line 41 did not have a close tag >, as closing it results in my entire screen being red. It should pass the validator if i close it but for the visual I will not be closing it.
 When on mobile view, the webpage should be similar to the structure of my wireframe shown. [My wireframe](https://github.com/j0van-ong/FED-Assignment1/blob/main/Other%20materials/FED_S10258240_JovanOng_Assg1_wiref.pdf)
 
 - When creating the website, my login form and advertisement message in homepage will arrange in column direction after resizing to a smaller screen. This may be seen if your laptop screen is smaller. 
