@@ -23,8 +23,8 @@
         <h1>Payment Page</h1>
         <form action="#"> <!--details to fill up-->
             <label for="paymentMthd">Select Payment Method: </label> <br/>
-            <input type ="radio" id="paymentMthd" name="paymentMthd" value="MasterCard" required><img src="./Images/Mastercard-Logo.png" alt="mastercard logo">
-            <input type ="radio" id="paymentMthd" name="paymentMthd" value="VISA" required> <img src="./Images/Visa_Logo.png" alt="VISA Logo"> <br/><br/>
+            <input type ="radio" name="paymentMthd" value="MasterCard" required><img src="./Images/Mastercard-Logo.png" alt="mastercard logo">
+            <input type ="radio" name="paymentMthd" value="VISA" required> <img src="./Images/Visa_Logo.png" alt="VISA Logo"> <br/><br/>
             <label for="BankNo">Enter Recipient Bank Account Number:</label>
             <input type ="text" placeholder="Enter Bank Account Number omitting dash..." id = "BankNo" name="BankNo" required>
             <label for="Amount">Input amount to transfer:</label>
@@ -43,7 +43,7 @@
         <div id="paymentRecipt"> <!--CONTAINER FOR RECEIPT, TO BE SHOWN AFTER PAYMENT-->
             <div class="logored"><img src="./Images/OCBC_Bank_logo_logotype_Singapore.png" alt="OCBC Logo"></div>
             <div class="centerAlign">
-              <h1>Payment Sucessful!</h1>
+              <h3>Payment Sucessful!</h3>
               <img src="./Images/Green-Tick-PNG-Pic.png" alt="Green tick">
             </div>
               <div id="completeReq">

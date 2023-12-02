@@ -136,6 +136,9 @@
    font-family: 'Lato', sans-serif;
 
 }
+.homecontent .addContent #advImg{
+    width: 100%;
+}
 /*bottom of webpage before login, footer*/
 .homecontent footer {
     padding-left: 2%;
